@@ -10,5 +10,8 @@ void main() {
 
     IO.println(person1.getAge());
     IO.println(person1.getName());
-    IO.println(person1.isAdult());
+    //IO.println(person1.isAdult());
+
+    person1.setName("Marek");
+    person1.showPerson();
 }

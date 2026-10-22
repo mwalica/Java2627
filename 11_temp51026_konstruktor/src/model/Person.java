@@ -8,7 +8,10 @@ public class Person {
     private int age = 23;//domyślnie 0
     private boolean isAdult = true;//domyślnie false
 
-    public Person() {};
+    public Person() {
+    }
+
+    ;
 
     public Person(String name, int age, boolean isAdult) {
         this.name = name;
@@ -51,7 +54,24 @@ public class Person {
         return age;
     }
 
-    public boolean isAdult() {
-        return isAdult;
+//    public boolean isAdult() {
+//        return isAdult;
+//    }
+
+    //settery
+
+    public void setName(String name) {
+        if (!name.equalsIgnoreCase("Marek")) {
+            this.name = name;
+        } else {
+            IO.println("Imię nie może być Marek");
+        }
+    }
+
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+            isAdult = age > 17;
+        }
     }
 }
